@@ -1,5 +1,5 @@
 <template>
-  <div class="layout" :style="layoutStyle">
+  <div class="iui-layout" :style="layoutStyle">
     <div v-if="$slots.side" class="side" :style="sideStyle">
       <slot name="side" />
     </div>
@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 $default-transition: all 0.3s;
 
-.layout {
+.iui-layout {
   display: inline-flex;
   width: 100%;
   height: 100%;
@@ -71,6 +71,7 @@ $default-transition: all 0.3s;
   }
   .main {
     overflow: auto;
+    flex-grow: 1;
   }
 }
 </style>
